@@ -1,7 +1,8 @@
 from flask import Flask
 from flask import request,render_template,redirect,url_for,send_file
 import os
-import win32com.client
+import pywin32
+#import win32com.client
 
 import pythoncom
 pythoncom.CoInitialize()
