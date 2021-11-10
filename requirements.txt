@@ -1,3 +1,4 @@
 flask
-pypiwin32
+python==3.10.0
+pypiwin32==223
 pythoncom
