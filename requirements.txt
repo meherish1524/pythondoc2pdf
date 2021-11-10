@@ -1,0 +1,4 @@
+flask
+os
+win32com.client
+pythoncom
