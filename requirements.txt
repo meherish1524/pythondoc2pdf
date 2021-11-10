@@ -1,4 +1,2 @@
 flask
-pywin32==300
-
 gunicorn
