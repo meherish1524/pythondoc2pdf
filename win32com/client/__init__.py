@@ -1,4 +1,4 @@
-# This module exists to create the "best" dispatch object for a given
+'''# This module exists to create the "best" dispatch object for a given
 # object.  If "makepy" support for a given object is detected, it is
 # used, otherwise a dynamic dispatch object.
 
@@ -710,3 +710,4 @@ class VARIANT(object):
 
     def __repr__(self):
         return "win32com.client.VARIANT(%r, %r)" % (self.varianttype, self._value)
+        '''
