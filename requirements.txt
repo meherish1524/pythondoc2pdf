@@ -1,4 +1,4 @@
 flask
-pypiwin32==223
+pywin32==227
 
 gunicorn
