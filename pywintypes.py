@@ -114,4 +114,4 @@ def __import_pywin32_system_module__(modname, globs):
     globs.update(mod.__dict__)
 
 
-#__import_pywin32_system_module__("pywintypes", globals())
+__import_pywin32_system_module__("pywintypes", globals())
