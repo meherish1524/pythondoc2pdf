@@ -46,9 +46,9 @@ def __import_pywin32_system_module__(modname, globs):
             )
     else:
         # First see if it already in our process - if so, we must use that.
-        import _win32sysloader
+        import pywin32
 
-        found = _win32sysloader.GetModuleFilename(filename)
+        found = pywin32.GetModuleFilename(filename)
         if found is None:
             # We ask Windows to load it next.  This is in an attempt to
             # get the exact same module loaded should pywintypes be imported
@@ -62,7 +62,7 @@ def __import_pywin32_system_module__(modname, globs):
             # load the one in the exe's dir.
             # That shouldn't really matter though, so long as we only ever
             # get one loaded.
-            found = _win32sysloader.LoadModule(filename)
+            found = pywin32.LoadModule(filename)
         if found is None:
             # Windows can't find it - which although isn't relevent here,
             # means that we *must* be the first win32 import, as an attempt
