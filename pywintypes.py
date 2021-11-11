@@ -44,8 +44,7 @@ def __import_pywin32_system_module__(modname, globs):
             raise ImportError(
                 "Module '%s' isn't in frozen sys.path %s" % (modname, sys.path)
             )
-""" 
-else:
+    else:
         # First see if it already in our process - if so, we must use that.
         import _win32sysloader
 
@@ -114,6 +113,4 @@ else:
     # as above - re-reset to the *old* module object then update globs.
     sys.modules[modname] = old_mod
     globs.update(mod.__dict__)
-
-"""
 __import_pywin32_system_module__("pywintypes", globals())
