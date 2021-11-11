@@ -97,7 +97,7 @@ else:
         if found is None:
             # give up in disgust.
             raise ImportError("No system module '%s' (%s)" % (modname, filename))
-    """
+   
     # After importing the module, sys.modules is updated to the DLL we just
     # loaded - which isn't what we want. So we update sys.modules to refer to
     # this module, and update our globals from it.
@@ -115,5 +115,5 @@ else:
     sys.modules[modname] = old_mod
     globs.update(mod.__dict__)
 
-
+"""
 __import_pywin32_system_module__("pywintypes", globals())
